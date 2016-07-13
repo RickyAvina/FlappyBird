@@ -19,6 +19,22 @@
 		941EB3E81D3618A700101712 /* 04B_19__.TTF in Resources */ = {isa = PBXBuildFile; fileRef = 941EB3E71D3618A700101712 /* 04B_19__.TTF */; };
 		941EB3EA1D361A2E00101712 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 941EB3E91D361A2E00101712 /* Info.plist */; };
 		941EB3EC1D361A4D00101712 /* RandomFunction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 941EB3EB1D361A4D00101712 /* RandomFunction.swift */; };
+		941EB3EF1D36245400101712 /* BuiltIO.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 941EB3ED1D36245400101712 /* BuiltIO.bundle */; };
+		941EB3F01D36245400101712 /* BuiltIO.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 941EB3EE1D36245400101712 /* BuiltIO.framework */; };
+		941EB3F21D36246D00101712 /* Accounts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 941EB3F11D36246D00101712 /* Accounts.framework */; };
+		941EB3F41D36247100101712 /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 941EB3F31D36247100101712 /* CFNetwork.framework */; };
+		941EB3F61D36247600101712 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 941EB3F51D36247600101712 /* CoreData.framework */; };
+		941EB3F81D36247C00101712 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 941EB3F71D36247C00101712 /* CoreGraphics.framework */; };
+		941EB3FA1D36248000101712 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 941EB3F91D36248000101712 /* CoreLocation.framework */; };
+		941EB3FC1D36248400101712 /* CoreTelephony.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 941EB3FB1D36248400101712 /* CoreTelephony.framework */; };
+		941EB3FE1D36248900101712 /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 941EB3FD1D36248900101712 /* MobileCoreServices.framework */; };
+		941EB4001D36248D00101712 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 941EB3FF1D36248D00101712 /* QuartzCore.framework */; };
+		941EB4021D36249100101712 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 941EB4011D36249000101712 /* Security.framework */; };
+		941EB4041D36249400101712 /* Social.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 941EB4031D36249400101712 /* Social.framework */; };
+		941EB4061D36249900101712 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 941EB4051D36249900101712 /* SystemConfiguration.framework */; };
+		941EB4081D36249E00101712 /* libicucore.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 941EB4071D36249E00101712 /* libicucore.tbd */; };
+		941EB40A1D3624A300101712 /* libsqlite3.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 941EB4091D3624A300101712 /* libsqlite3.tbd */; };
+		941EB40D1D36255400101712 /* ServerConnect.swift in Sources */ = {isa = PBXBuildFile; fileRef = 941EB40C1D36255400101712 /* ServerConnect.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -56,6 +72,23 @@
 		941EB3E71D3618A700101712 /* 04B_19__.TTF */ = {isa = PBXFileReference; lastKnownFileType = file; path = 04B_19__.TTF; sourceTree = "<group>"; };
 		941EB3E91D361A2E00101712 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		941EB3EB1D361A4D00101712 /* RandomFunction.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RandomFunction.swift; sourceTree = "<group>"; };
+		941EB3ED1D36245400101712 /* BuiltIO.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = BuiltIO.bundle; sourceTree = "<group>"; };
+		941EB3EE1D36245400101712 /* BuiltIO.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = BuiltIO.framework; sourceTree = "<group>"; };
+		941EB3F11D36246D00101712 /* Accounts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accounts.framework; path = System/Library/Frameworks/Accounts.framework; sourceTree = SDKROOT; };
+		941EB3F31D36247100101712 /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
+		941EB3F51D36247600101712 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		941EB3F71D36247C00101712 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		941EB3F91D36248000101712 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		941EB3FB1D36248400101712 /* CoreTelephony.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreTelephony.framework; path = System/Library/Frameworks/CoreTelephony.framework; sourceTree = SDKROOT; };
+		941EB3FD1D36248900101712 /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
+		941EB3FF1D36248D00101712 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		941EB4011D36249000101712 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
+		941EB4031D36249400101712 /* Social.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Social.framework; path = System/Library/Frameworks/Social.framework; sourceTree = SDKROOT; };
+		941EB4051D36249900101712 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		941EB4071D36249E00101712 /* libicucore.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libicucore.tbd; path = usr/lib/libicucore.tbd; sourceTree = SDKROOT; };
+		941EB4091D3624A300101712 /* libsqlite3.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.tbd; path = usr/lib/libsqlite3.tbd; sourceTree = SDKROOT; };
+		941EB40B1D3624CE00101712 /* BridgeHeader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BridgeHeader.h; sourceTree = "<group>"; };
+		941EB40C1D36255400101712 /* ServerConnect.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ServerConnect.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +96,20 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				941EB40A1D3624A300101712 /* libsqlite3.tbd in Frameworks */,
+				941EB4081D36249E00101712 /* libicucore.tbd in Frameworks */,
+				941EB4061D36249900101712 /* SystemConfiguration.framework in Frameworks */,
+				941EB4041D36249400101712 /* Social.framework in Frameworks */,
+				941EB4021D36249100101712 /* Security.framework in Frameworks */,
+				941EB4001D36248D00101712 /* QuartzCore.framework in Frameworks */,
+				941EB3FE1D36248900101712 /* MobileCoreServices.framework in Frameworks */,
+				941EB3FC1D36248400101712 /* CoreTelephony.framework in Frameworks */,
+				941EB3FA1D36248000101712 /* CoreLocation.framework in Frameworks */,
+				941EB3F81D36247C00101712 /* CoreGraphics.framework in Frameworks */,
+				941EB3F61D36247600101712 /* CoreData.framework in Frameworks */,
+				941EB3F41D36247100101712 /* CFNetwork.framework in Frameworks */,
+				941EB3F21D36246D00101712 /* Accounts.framework in Frameworks */,
+				941EB3F01D36245400101712 /* BuiltIO.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -90,6 +137,21 @@
 				941EB3CD1D3617E500101712 /* FlappyBirdTests */,
 				941EB3D81D3617E500101712 /* FlappyBirdUITests */,
 				941EB3B31D3617E500101712 /* Products */,
+				941EB4091D3624A300101712 /* libsqlite3.tbd */,
+				941EB4071D36249E00101712 /* libicucore.tbd */,
+				941EB4051D36249900101712 /* SystemConfiguration.framework */,
+				941EB4031D36249400101712 /* Social.framework */,
+				941EB4011D36249000101712 /* Security.framework */,
+				941EB3FF1D36248D00101712 /* QuartzCore.framework */,
+				941EB3FD1D36248900101712 /* MobileCoreServices.framework */,
+				941EB3FB1D36248400101712 /* CoreTelephony.framework */,
+				941EB3F91D36248000101712 /* CoreLocation.framework */,
+				941EB3F71D36247C00101712 /* CoreGraphics.framework */,
+				941EB3F51D36247600101712 /* CoreData.framework */,
+				941EB3F31D36247100101712 /* CFNetwork.framework */,
+				941EB3F11D36246D00101712 /* Accounts.framework */,
+				941EB3ED1D36245400101712 /* BuiltIO.bundle */,
+				941EB3EE1D36245400101712 /* BuiltIO.framework */,
 			);
 			sourceTree = "<group>";
 		};
@@ -116,6 +178,8 @@
 				941EB3E91D361A2E00101712 /* Info.plist */,
 				941EB3C01D3617E500101712 /* Assets.xcassets */,
 				941EB3C21D3617E500101712 /* LaunchScreen.storyboard */,
+				941EB40B1D3624CE00101712 /* BridgeHeader.h */,
+				941EB40C1D36255400101712 /* ServerConnect.swift */,
 			);
 			path = FlappyBird;
 			sourceTree = "<group>";
@@ -251,6 +315,7 @@
 				941EB3C11D3617E500101712 /* Assets.xcassets in Resources */,
 				941EB3EA1D361A2E00101712 /* Info.plist in Resources */,
 				941EB3BF1D3617E500101712 /* Main.storyboard in Resources */,
+				941EB3EF1D36245400101712 /* BuiltIO.bundle in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -278,6 +343,7 @@
 				941EB3BA1D3617E500101712 /* GameScene.swift in Sources */,
 				941EB3BC1D3617E500101712 /* GameViewController.swift in Sources */,
 				941EB3EC1D361A4D00101712 /* RandomFunction.swift in Sources */,
+				941EB40D1D36255400101712 /* ServerConnect.swift in Sources */,
 				941EB3B61D3617E500101712 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -422,10 +488,16 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				INFOPLIST_FILE = FlappyBird/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_BUNDLE_IDENTIFIER = RickyAvina.FlappyBird;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = FlappyBird/BridgeHeader.h;
 			};
 			name = Debug;
 		};
@@ -433,10 +505,16 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				INFOPLIST_FILE = FlappyBird/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_BUNDLE_IDENTIFIER = RickyAvina.FlappyBird;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = FlappyBird/BridgeHeader.h;
 			};
 			name = Release;
 		};

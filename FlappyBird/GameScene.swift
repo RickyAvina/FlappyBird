@@ -41,10 +41,6 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         self.removeAllActions()
         died = false
         gameStarted = false
-        
-        if (score>highScore){
-            highScore = score
-        }
         score = 0
         createScene()
         
@@ -108,12 +104,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         
         
         self.addChild(Ghost)
-        
-        
-        
-        
-        
-        
+
     }
     
     override func didMoveToView(view: SKView) {
@@ -164,9 +155,15 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
                 self.removeAllActions()
                 
             }))
-            if died == false{
+            if died == false{  // died
                 died = true
                 createBTN()
+                
+                if (score>highScore){
+                    highScore = score
+                }
+                
+                ServerConnect.sharedInstance.sendScore(username: "TestUserame", score: score, highScore: highScore)
             }
         }
         else if firstBody.categoryBitMask == PhysicsCatagory.Ghost && secondBody.categoryBitMask == PhysicsCatagory.Ground || firstBody.categoryBitMask == PhysicsCatagory.Ground && secondBody.categoryBitMask == PhysicsCatagory.Ghost{
