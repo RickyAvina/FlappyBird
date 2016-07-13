@@ -113,9 +113,9 @@
 				941EB3BB1D3617E500101712 /* GameViewController.swift */,
 				941EB3EB1D361A4D00101712 /* RandomFunction.swift */,
 				941EB3BD1D3617E500101712 /* Main.storyboard */,
+				941EB3E91D361A2E00101712 /* Info.plist */,
 				941EB3C01D3617E500101712 /* Assets.xcassets */,
 				941EB3C21D3617E500101712 /* LaunchScreen.storyboard */,
-				941EB3E91D361A2E00101712 /* Info.plist */,
 			);
 			path = FlappyBird;
 			sourceTree = "<group>";

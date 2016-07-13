@@ -15,10 +15,7 @@ struct PhysicsCatagory {
     static let Score : UInt32 = 0x1 << 4
 }
 
-
-
 class GameScene: SKScene, SKPhysicsContactDelegate {
-    
     
     var Ground = SKSpriteNode()
     var Ghost = SKSpriteNode()
@@ -32,6 +29,9 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     var score = Int()
     let scoreLbl = SKLabelNode()
     
+    var highScore = Int()
+    var highScoreLbl = SKLabelNode()
+    
     var died = Bool()
     var restartBTN = SKSpriteNode()
     
@@ -41,6 +41,10 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         self.removeAllActions()
         died = false
         gameStarted = false
+        
+        if (score>highScore){
+            highScore = score
+        }
         score = 0
         createScene()
         
@@ -67,6 +71,13 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         scoreLbl.fontSize = 60
         self.addChild(scoreLbl)
         
+        highScoreLbl.position = CGPoint(x: self.frame.width/2, y: 5)
+        highScoreLbl.text = "High Score: \(highScore)"
+        highScoreLbl.fontName = "04b_19"
+        highScoreLbl.zPosition = 5
+        highScoreLbl.fontSize = 32
+        self.addChild(highScoreLbl)
+        
         Ground = SKSpriteNode(imageNamed: "Ground")
         Ground.setScale(0.5)
         Ground.position = CGPoint(x: self.frame.width / 2, y: 0 + Ground.frame.height / 2)
@@ -81,8 +92,6 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         Ground.zPosition = 3
         
         self.addChild(Ground)
-        
-        
         
         Ghost = SKSpriteNode(imageNamed: "Ghost")
         Ghost.size = CGSize(width: 60, height: 70)
@@ -133,14 +142,14 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         
         if firstBody.categoryBitMask == PhysicsCatagory.Score && secondBody.categoryBitMask == PhysicsCatagory.Ghost{
             
-            score++
+            score += 1
             scoreLbl.text = "\(score)"
             firstBody.node?.removeFromParent()
             
         }
         else if firstBody.categoryBitMask == PhysicsCatagory.Ghost && secondBody.categoryBitMask == PhysicsCatagory.Score {
             
-            score++
+            score += 1
             scoreLbl.text = "\(score)"
             secondBody.node?.removeFromParent()
             
@@ -220,7 +229,6 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
                 Ghost.physicsBody?.velocity = CGVectorMake(0, 0)
                 Ghost.physicsBody?.applyImpulse(CGVectorMake(0, 90))
             }
-            
         }
         
         
@@ -235,16 +243,9 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
                     
                 }
                 
-                
             }
-            
+ 
         }
-        
-        
-        
-        
-        
-        
     }
     
     func createWalls(){
@@ -296,7 +297,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         
         wallPair.zPosition = 1
         
-        var randomPosition = CGFloat.random(min: -200, max: 200)
+        let randomPosition = CGFloat.random(min: -200, max: 200)
         wallPair.position.y = wallPair.position.y +  randomPosition
         wallPair.addChild(scoreNode)
         
@@ -314,7 +315,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
                 enumerateChildNodesWithName("background", usingBlock: ({
                     (node, error) in
                     
-                    var bg = node as! SKSpriteNode
+                    let bg = node as! SKSpriteNode
                     
                     bg.position = CGPoint(x: bg.position.x - 2, y: bg.position.y)
                     
@@ -327,11 +328,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
                 
             }
             
-            
         }
-        
-        
-        
         
     }
 }
