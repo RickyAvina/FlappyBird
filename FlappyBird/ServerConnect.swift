@@ -9,33 +9,42 @@
 import Foundation
 
 class ServerConnect{
+    
     static let sharedInstance = ServerConnect()
     
-    var app : BuiltApplication?
-    var ScoreClass : BuiltClass?
-    var scoreObject : BuiltObject?
-    
+    var app: BuiltApplication?
+
     func initialize(){
         app = Built.applicationWithAPIKey("blt1c97ce4f38d2de63")
-        ScoreClass = app?.classWithUID("ScoreData")
-        scoreObject = ScoreClass?.object()
     }
     
-    func sendScore(username username: String, score: Int, highScore: Int){
-        scoreObject!["username"] = username
-        scoreObject!["score"] = score
-        scoreObject!["highScore"] = highScore
+    func postScore(highScore : Int){
+        let ScoreClass = app!.classWithUID("ScoreData")
+        let scoreObject = ScoreClass.object()
+        scoreObject["username"] = "TestUser"
+        scoreObject["score"] = 4
+        scoreObject["highScore"] = highScore
         
-        scoreObject?.saveInBackgroundWithCompletion{(responseType: ResponseType, error: NSError!) -> Void in
+        scoreObject.saveInBackgroundWithCompletion{(repsonseType: ResponseType, error: NSError!) -> Void in
             if (error == nil){
-                // created successfully
-                print("Object created successfully!")
+                
             } else {
-                // error
-                print("Not created successfully")
-                print(error.userInfo)
+                print (error.userInfo)
             }
             
-            }
+        }
     }
+    
+    func  getHighScoreForUser(uid: String) -> Int {
+        var score : Int = 0
+        // get score for the use from Built using Query
+        // score = HS
+        return score
+    }
+    
+    func getAllScoresForUserWithUID(uid: String)-> [Int : NSDate] {
+        return [0 : NSDate(), 349 : NSDate()]
+    }
+    
+    
 }

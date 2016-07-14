@@ -174,12 +174,12 @@
 				941EB3B91D3617E500101712 /* GameScene.swift */,
 				941EB3BB1D3617E500101712 /* GameViewController.swift */,
 				941EB3EB1D361A4D00101712 /* RandomFunction.swift */,
+				941EB40C1D36255400101712 /* ServerConnect.swift */,
 				941EB3BD1D3617E500101712 /* Main.storyboard */,
 				941EB3E91D361A2E00101712 /* Info.plist */,
 				941EB3C01D3617E500101712 /* Assets.xcassets */,
 				941EB3C21D3617E500101712 /* LaunchScreen.storyboard */,
 				941EB40B1D3624CE00101712 /* BridgeHeader.h */,
-				941EB40C1D36255400101712 /* ServerConnect.swift */,
 			);
 			path = FlappyBird;
 			sourceTree = "<group>";
@@ -585,6 +585,7 @@
 				941EB3E01D3617E500101712 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		941EB3E11D3617E500101712 /* Build configuration list for PBXNativeTarget "FlappyBirdTests" */ = {
 			isa = XCConfigurationList;
@@ -593,6 +594,7 @@
 				941EB3E31D3617E500101712 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		941EB3E41D3617E500101712 /* Build configuration list for PBXNativeTarget "FlappyBirdUITests" */ = {
 			isa = XCConfigurationList;
@@ -601,6 +603,7 @@
 				941EB3E61D3617E500101712 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

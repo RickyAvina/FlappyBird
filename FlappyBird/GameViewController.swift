@@ -11,6 +11,23 @@ import SpriteKit
 
 class GameViewController: UIViewController {
     
+    private var hs = 0
+    var highScore : Int {
+        set {
+            hs = newValue
+            ServerConnect.sharedInstance.postScore(newValue)
+        }
+        
+        get {
+            return hs
+        }
+    }
+    
+    func gameOverWithScore(score : Int){
+        if (score > highScore){
+            highScore = score
+        }
+    }
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -28,6 +45,7 @@ class GameViewController: UIViewController {
             scene.size = self.view.bounds.size
             
             skView.presentScene(scene)
+            
         }
     }
     

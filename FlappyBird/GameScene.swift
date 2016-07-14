@@ -34,7 +34,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     
     var died = Bool()
     var restartBTN = SKSpriteNode()
-    
+        
     func restartScene(){
         
         self.removeAllChildren()
@@ -163,7 +163,6 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
                     highScore = score
                 }
                 
-                ServerConnect.sharedInstance.sendScore(username: "TestUserame", score: score, highScore: highScore)
             }
         }
         else if firstBody.categoryBitMask == PhysicsCatagory.Ghost && secondBody.categoryBitMask == PhysicsCatagory.Ground || firstBody.categoryBitMask == PhysicsCatagory.Ground && secondBody.categoryBitMask == PhysicsCatagory.Ghost{
