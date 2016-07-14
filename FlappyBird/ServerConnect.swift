@@ -19,7 +19,7 @@ class ServerConnect{
     }
     
     func postScore(highScore : Int){
-        let ScoreClass = app!.classWithUID("ScoreData")
+        let ScoreClass = app!.classWithUID("scoredata")
         let scoreObject = ScoreClass!.object()
         scoreObject!["highscore"] = highScore
         
