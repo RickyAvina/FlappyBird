@@ -21,7 +21,7 @@ class ServerConnect{
     func postScore(highScore : Int){
         let ScoreClass = app!.classWithUID("ScoreData")
         let scoreObject = ScoreClass!.object()
-        scoreObject!["highScore"] = highScore
+        scoreObject!["highscore"] = highScore
         
         scoreObject.saveInBackgroundWithCompletion{(repsonseType: ResponseType, error: NSError!) -> Void in
             if (error == nil){
@@ -29,10 +29,9 @@ class ServerConnect{
             } else {
                 print (error.userInfo)
             }
-            
         }
     }
-    
+
     func  getHighScoreForUser(uid: String) -> Int {
         var score : Int = 0
         // get score for the use from Built using Query

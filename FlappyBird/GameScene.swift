@@ -60,6 +60,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         self.removeAllActions()
         died = false
         gameStarted = false
+        gameOverWithScore(score)
         score = 0
         createScene()
         
@@ -176,7 +177,6 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
             }))
             if died == false{  // died
                 died = true
-                gameOverWithScore(score)
                 createBTN()
             }
         }
@@ -249,6 +249,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
             let location = touch.locationInNode(self)
             
             if died == true{
+
                 if restartBTN.containsPoint(location){
                     restartScene()
                     
