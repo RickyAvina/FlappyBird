@@ -20,14 +20,12 @@ class ServerConnect{
     
     func postScore(highScore : Int){
         let ScoreClass = app!.classWithUID("ScoreData")
-        let scoreObject = ScoreClass.object()
-        scoreObject["username"] = "TestUser"
-        scoreObject["score"] = 4
-        scoreObject["highScore"] = highScore
+        let scoreObject = ScoreClass!.object()
+        scoreObject!["highScore"] = highScore
         
         scoreObject.saveInBackgroundWithCompletion{(repsonseType: ResponseType, error: NSError!) -> Void in
             if (error == nil){
-                
+                print("Object Created Successfully")
             } else {
                 print (error.userInfo)
             }

@@ -29,12 +29,31 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     var score = Int()
     let scoreLbl = SKLabelNode()
     
-    var highScore = Int()
     var highScoreLbl = SKLabelNode()
     
     var died = Bool()
     var restartBTN = SKSpriteNode()
+    
+    // Server Stuff
+    
+    private var hs = 0
+    var highScore : Int {
+        set {
+            hs = newValue
+            ServerConnect.sharedInstance.postScore(newValue)
+        }
         
+        get {
+            return hs
+        }
+    }
+    
+    func gameOverWithScore(score : Int){
+        if (score > highScore){
+            highScore = score
+        }
+    }
+    
     func restartScene(){
         
         self.removeAllChildren()
@@ -157,12 +176,8 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
             }))
             if died == false{  // died
                 died = true
+                gameOverWithScore(score)
                 createBTN()
-                
-                if (score>highScore){
-                    highScore = score
-                }
-                
             }
         }
         else if firstBody.categoryBitMask == PhysicsCatagory.Ghost && secondBody.categoryBitMask == PhysicsCatagory.Ground || firstBody.categoryBitMask == PhysicsCatagory.Ground && secondBody.categoryBitMask == PhysicsCatagory.Ghost{
