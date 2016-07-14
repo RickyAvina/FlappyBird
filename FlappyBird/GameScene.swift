@@ -31,10 +31,14 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     
     var highScoreLbl = SKLabelNode()
     
+    var globalHighScoreLbl = SKLabelNode()
+    
     var died = Bool()
     var restartBTN = SKSpriteNode()
     
     // Server Stuff
+    
+    var globalHighScore: Int = ServerConnect.sharedInstance.getGlobalHighScore()
     
     private var hs = 0
     var highScore : Int {
@@ -55,7 +59,6 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     }
     
     func restartScene(){
-        
         self.removeAllChildren()
         self.removeAllActions()
         died = false
@@ -94,6 +97,13 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         highScoreLbl.fontSize = 32
         self.addChild(highScoreLbl)
         
+        globalHighScoreLbl.position = CGPoint(x: self.frame.width/2, y: self.frame.height/2)
+        globalHighScoreLbl.text = "Global High Score: \(globalHighScore)"
+        globalHighScoreLbl.fontName = "04b_19"
+        globalHighScoreLbl.zPosition = 5
+        globalHighScoreLbl.fontSize = 32
+        self.addChild(globalHighScoreLbl)
+        
         Ground = SKSpriteNode(imageNamed: "Ground")
         Ground.setScale(0.5)
         Ground.position = CGPoint(x: self.frame.width / 2, y: 0 + Ground.frame.height / 2)
@@ -124,7 +134,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         
         
         self.addChild(Ghost)
-
+        
     }
     
     override func didMoveToView(view: SKView) {
@@ -195,10 +205,6 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
             }
         }
         
-        
-        
-        
-        
     }
     
     
@@ -249,14 +255,14 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
             let location = touch.locationInNode(self)
             
             if died == true{
-
+                
                 if restartBTN.containsPoint(location){
                     restartScene()
                     
                 }
                 
             }
- 
+            
         }
     }
     
@@ -338,6 +344,8 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
                     
                 }))
                 
+            } else {
+        
             }
             
         }

@@ -13,7 +13,11 @@ class ServerConnect{
     static let sharedInstance = ServerConnect()
     
     var app: BuiltApplication?
-
+//    var ScoreClass : BuiltClass?
+//    var scoreObject : BuiltObject?
+    
+    var globalHighScore : Int?
+    
     func initialize(){
         app = Built.applicationWithAPIKey("blt1c97ce4f38d2de63")
     }
@@ -22,20 +26,32 @@ class ServerConnect{
         let ScoreClass = app!.classWithUID("scoredata")
         let scoreObject = ScoreClass!.object()
         scoreObject!["highscore"] = highScore
-        
-        scoreObject.saveInBackgroundWithCompletion{(repsonseType: ResponseType, error: NSError!) -> Void in
+        scoreObject!.saveInBackgroundWithCompletion{(repsonseType: ResponseType, error: NSError!) -> Void in
             if (error == nil){
                 print("Object Created Successfully")
             } else {
                 print (error.userInfo)
             }
         }
-    }
 
-    func  getHighScoreForUser(uid: String) -> Int {
-        var score : Int = 0
-        // get score for the use from Built using Query
-        // score = HS
+    }
+    
+    func getGlobalHighScore() -> Int {
+        var score = 0
+        let ScoreClass = app!.classWithUID("scoredata")
+        let projectQuery = ScoreClass!.query()
+        projectQuery.orderByDescending("highscore")
+        
+        projectQuery.execInBackground{(responseType: ResponseType, result: QueryResult!, error: NSError!) -> Void in
+            if (error == nil){
+                print("Query executed successfully")
+                let g = (result!.getResult()!)[0]
+                score = (g["highscore"]!)! as! Int
+                
+            } else {
+                print(error.userInfo)
+            }
+        }
         return score
     }
     
